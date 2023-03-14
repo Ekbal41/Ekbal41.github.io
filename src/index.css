@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap");
+body {
+  font-family: "Montserrat", sans-serif !important;
+  color: #4c4e55 !important;
+}
+.bt-icon{
+  font-size: 20px;
+}
+.bt-icon:hover{
+  color: #6b46c1 !important;
+}

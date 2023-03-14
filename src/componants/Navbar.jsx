@@ -1,4 +1,4 @@
-import { ChevronDownIcon, TriangleDownIcon } from "@chakra-ui/icons";
+import { TriangleDownIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -11,7 +11,6 @@ import {
   DrawerOverlay,
   Flex,
   HStack,
-  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -43,31 +42,31 @@ function Navbar() {
               </Text>
             </Box>
             <Box display={{ base: "none", md: "block" }}>
-              <Flex alignItems={"center"}>
-                <Text mx={3}>Home</Text>
-                <Text mx={3}>About Us</Text>
+              <Flex alignItems={"center"} >
+                <Text mx={3} fontWeight={"bold"}>Home</Text>
+                <Text mx={3} fontWeight={"bold"}>About Us</Text>
 
-                <Menu>
-                  <MenuButton mx={3}>
+                <Menu >
+                  <MenuButton mx={3} fontWeight={"bold"}>
                     Works <TriangleDownIcon />{" "}
                   </MenuButton>
                   <MenuList>
-                    <MenuItem as="a" href="#">
+                    <MenuItem as="a" href="#" fontWeight={"bold"}>
                       Facebook
                     </MenuItem>
-                    <MenuItem as="a" href="#">
+                    <MenuItem as="a" href="#" fontWeight={"bold"}>
                       Email
                     </MenuItem>
-                    <MenuItem as="a" href="#">
+                    <MenuItem as="a" href="#" fontWeight={"bold"}>
                       Facebook
                     </MenuItem>
-                    <MenuItem as="a" href="#">
+                    <MenuItem as="a" href="#" fontWeight={"bold"}>
                       Email
                     </MenuItem>
                   </MenuList>
                 </Menu>
 
-                <Text mx={3}>Contact Us</Text>
+                <Text mx={3} fontWeight={"bold"}>Contact Us</Text>
               </Flex>
             </Box>
 
