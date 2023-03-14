@@ -1,5 +1,9 @@
 import { Box, Flex, HStack, Text, Tooltip } from "@chakra-ui/react";
 import React from "react";
+import TwitterIcon from "../assets/icons8-twitter.svg";
+import FbIcon from "../assets/icons8-facebook.svg";
+import InstaIcon from "../assets/icons8-instagram.svg";
+import GithubIcon from "../assets/icons8-github-56.png";
 
 function Footer() {
   return (
@@ -18,32 +22,40 @@ function Footer() {
             <Text label="Instagram">Contact Us</Text>
           </Flex>
         </Box>
-        <Flex gap={1}>
-          <Text fontWeight={500}>
-            Copyright © 2023, All Rights Reserved by{" "}
-          </Text>
-          <Text color={"purple.500"}>Taiuun.</Text>
+        <Flex
+          gap={1}
+          flexDir={{ base: "column", md: "row" }}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <Text fontWeight={500}>Copyright © 2023, All Rights Reserved </Text>
+          <Text color={"blue.500"}> ByTaiuun.</Text>
         </Flex>
-        <HStack spacing="24px" display={{ base: "none", md: "block" }}>
-          <Tooltip label="Facebook" placement="left-end">
+        <HStack spacing="24px">
+          <Tooltip label="Twitter" placement="left-end">
             <span class="bt-icon">
-              <i class="bi bi-facebook"></i>
+              {/* <i class="bi bi-twitter"></i> */}
+              <img style={{height: 30,}} src={TwitterIcon} />
             </span>
           </Tooltip>
-          <Tooltip label="Twitter" placement="bottom-end">
+          <Tooltip label="Facebook" placement="bottom-end">
             <span class="bt-icon">
-              <i class="bi bi-twitter"></i>
+              {/* <i class="bi bi-facebook"></i> */}
+              <img style={{height: 30,}} src={FbIcon} />
             </span>
           </Tooltip>
+
           <Tooltip label="Instagram" placement="bottom-end">
             <span class="bt-icon">
-              <i class="bi bi-instagram"></i>
+              {/* <i class="bi bi-instagram"></i> */}
+              <img style={{height: 30,}} src={InstaIcon} />
             </span>
           </Tooltip>
 
           <Tooltip label="Github" placement="right-end">
             <span class="bt-icon">
-              <i class="bi bi-github"></i>
+              {/* <i class="bi bi-github"></i> */}
+              <img style={{height: 30,}} src={GithubIcon} />
             </span>
           </Tooltip>
         </HStack>

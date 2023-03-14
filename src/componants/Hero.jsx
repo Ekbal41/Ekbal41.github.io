@@ -5,11 +5,12 @@ import HeroImage from "../assets/hero.jpg";
 function Hero() {
   return (
     <>
-    <Container maxW={"95%"}>
-      <Flex justifyContent={"space-evenly"} height={"90vh"} alignItems={"center"} >
+    <Container maxW={1400}>
+      <Flex justifyContent={{ base:"start" , md:"space-evenly"}} flexDir={{base: "column", md:"row"}}  height={{base: "auto", md:"90vh"}} alignItems={"center"} >
         <Box
        
-        w={"50%"}
+        w={{base: "100%", md:"50%"}}
+        marginTop={{base: "20", md:"0"}}
         >
           <Heading mb={4}>
             Advanced HTML & React Website Templates and Themes to build your
@@ -22,7 +23,7 @@ function Hero() {
           </Text>
           
         </Box>
-        <Box  w={"50%"} >
+        <Box  w={{base:"100%", md:"50%"}} >
           <Image objectFit="cover" mx={"auto"} src={HeroImage} alt="Hero"  />
         </Box>
       </Flex>

@@ -14,7 +14,7 @@ import DummyImage from "../assets/dummy.jpg";
 function Works({ title, backG, btnText }) {
   return (
     <>
-      <Box bg={backG}>
+      <Box bg={backG} py={8}>
         <Container maxW={"93%"} py={12}>
           <Flex
             justifyContent={"center"}
@@ -24,8 +24,8 @@ function Works({ title, backG, btnText }) {
             <Box>
               <Heading my={8}>{title}</Heading>
             </Box>
-            <Flex gap={4} mt={4}>
-              <Box w={400} p={2}>
+            <Flex gap={4} mt={4} flexDir={{base:"column", md:"row"}}>
+              <Box w={{base:"100%",md:400}} p={{base:0, md:2}} my={6}>
                 <Image src={DummyImage} mb={4} objectFit="contain" />
                 <Text
                   fontSize={"xl"}
@@ -35,7 +35,7 @@ function Works({ title, backG, btnText }) {
                   Lorem ipsum dolor sit amet.
                 </Text>
               </Box>
-              <Box w={400} p={2}>
+              <Box w={{base:"100%",md:400}} p={{base:0, md:2}}my={6}>
                 <Image src={DummyImage} mb={4} objectFit="contain" />
                 <Text
                   fontSize={"xl"}
@@ -45,7 +45,7 @@ function Works({ title, backG, btnText }) {
                   Lorem ipsum dolor sit amet.
                 </Text>
               </Box>
-              <Box w={400} p={2}>
+              <Box w={{base:"100%",md:400}} p={{base:0, md:2}}my={6}>
                 <Image src={DummyImage} mb={4} objectFit="contain" />
                 <Text
                   fontSize={"xl"}
@@ -58,7 +58,7 @@ function Works({ title, backG, btnText }) {
             </Flex>
           </Flex>
           <Flex justifyContent={"center"} alignItems={"center"} mt={4}>
-            <Button alignSelf={"center"} size="md" colorScheme="purple">
+            <Button alignSelf={"center"} size="md" colorScheme="blue">
               {btnText}
             </Button>
           </Flex>
