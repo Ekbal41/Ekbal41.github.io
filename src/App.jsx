@@ -1,22 +1,36 @@
 import "./App.css";
-import Navbar from "./componants/Navbar";
-import Hero from "./componants/Hero";
-import Works from "./componants/Works";
-import Footer from "./componants/Footer";
-import WhyUs from "./componants/WhyUs";
-import Counts from "./componants/Counts";
-import Testimonial from "./componants/Testimonial";
+import { useColorMode } from "@chakra-ui/react";
+import _Navbar from "./componantstwo/Navbar";
+import _Intro from "./componantstwo/Intro";
+import _Works from "./componantstwo/Works";
+import _With from "./componantstwo/With";
+import _Footer from "./componantstwo/Footer";
+import _CommandP from "./componantstwo/Commandp";
+import { allwork, recentwork } from "../data/data";
+
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Works title="All Works" backG="white" btnText="View All Works" />
-      <Works title="React Works" backG="" btnText="View All React Works"/>
-      <WhyUs />
-      <Testimonial />
-      <Counts />
-      <Footer />
+      <_CommandP>
+        <_Navbar />
+        <_Intro />
+        <_Works
+          data={allwork}
+          title="Recent Work"
+          desc="My recent projects"
+          _bg={colorMode === "light" ? "blackAlpha.100" : "#0e1013"}
+        />
+        <_Works
+          data={recentwork}
+          title="All Works"
+          desc=""
+          _bg={colorMode === "light" ? "white" : "#17181b"}
+        />
+        <_With />
+        <_Footer />
+      </_CommandP>
     </>
   );
 }
