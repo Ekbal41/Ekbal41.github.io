@@ -1,4 +1,9 @@
-import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  ExternalLinkIcon,
+  HamburgerIcon,
+  MoonIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
 import {
   Button,
   Container,
@@ -15,6 +20,8 @@ import {
   MenuDivider,
   MenuGroup,
   Tooltip,
+  Spacer,
+  Link,
 } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { RiCommandFill } from "react-icons/ri";
@@ -95,13 +102,56 @@ function Navbar() {
                   </Tooltip>
                   <MenuList>
                     <MenuGroup title="Profile">
-                      <MenuItem>My Account</MenuItem>
-                      <MenuItem>Payments </MenuItem>
+                      <MenuItem>All Works </MenuItem>
+                      <MenuItem>Contact Me</MenuItem>
                     </MenuGroup>
                     <MenuDivider />
-                    <MenuGroup title="Help">
-                      <MenuItem>Docs</MenuItem>
-                      <MenuItem>FAQ</MenuItem>
+                    <MenuGroup title="Find Me On">
+                      <MenuItem
+                        as={Link}
+                        _hover={{
+                          textDecoration: "none",
+                          border: "none",
+                          shadow: "none",
+                        }}
+                        href={"https://github.com/Ekbal41"}
+                      >
+                        Github <Spacer /> <ExternalLinkIcon />
+                      </MenuItem>
+                      <MenuItem
+                        as={Link}
+                        _hover={{
+                          textDecoration: "none",
+                          border: "none",
+                          shadow: "none",
+                        }}
+                        href={"https://facebook.com/Ekbal41"}
+                      >
+                        Facebook <Spacer /> <ExternalLinkIcon />
+                      </MenuItem>
+                      <MenuItem
+                        as={Link}
+                        _hover={{
+                          textDecoration: "none",
+                          border: "none",
+                          shadow: "none",
+                        }}
+                        href={"https://twitter.com/Ekbal41"}
+                      >
+                        Twitter <Spacer /> <ExternalLinkIcon />
+                      </MenuItem>
+                      <MenuItem
+                        as={Link}
+                        _hover={{
+                          textDecoration: "none",
+
+                          border: "none",
+                          shadow: "none",
+                        }}
+                        href={"https://www.linkedin.com/in/ekbal41/"}
+                      >
+                        Linkein <Spacer /> <ExternalLinkIcon />
+                      </MenuItem>
                     </MenuGroup>
                   </MenuList>
                 </Menu>

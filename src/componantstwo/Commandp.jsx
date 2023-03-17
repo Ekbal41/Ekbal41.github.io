@@ -19,12 +19,13 @@ const Commandp = ({ children }) => {
 
   const handleOpenCommandPalette = useCallback(() => {
     setOpen(!open);
-    beepPlay();
   });
+
   useEffect(() => {
     document.addEventListener("keydown", (e) => {
       if (e.key === "c" && e.ctrlKey) {
         handleOpenCommandPalette();
+        new Audio(beep).play();
       }
     });
   }, []);

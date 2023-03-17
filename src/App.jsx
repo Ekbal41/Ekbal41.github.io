@@ -17,13 +17,13 @@ function App() {
         <_Navbar />
         <_Intro />
         <_Works
-          data={allwork}
+          data={recentwork}
           title="Recent Work"
           desc="My recent projects"
           _bg={colorMode === "light" ? "blackAlpha.100" : "#0e1013"}
         />
         <_Works
-          data={recentwork}
+          data={allwork}
           title="All Works"
           desc=""
           _bg={colorMode === "light" ? "white" : "#17181b"}
