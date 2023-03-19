@@ -48,13 +48,14 @@ function Navbar() {
   return (
     <>
       <Box
+      px={{ base: 6, md: 20 }}
         position="sticky"
         top="0"
         zIndex={10}
         bg={colorMode === "light" ? "white" : "#17181b"}
         color={colorMode === "light" ? "" : "gray.200"}
       >
-        <Container maxW={"90%"}>
+        <Container  maxW={"8xl"}>
           <Flex
             justifyContent={"space-between"}
             alignItems={"center"}
